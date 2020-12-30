@@ -17,4 +17,10 @@
     <a href="{{route('cursos.index')}}" class="btn btn-success">volver couse <i class="fa arrow-alt-circle-left"></i></a>
     <a href="{{route('cursos.edit',$curso)}}" class="btn btn-warning">Edit couse <i class="fa fa-pencil "></i></a>
  </p>
+
+ <form action="{{route('cursos.destroy', $curso)}}" method="POST">
+     @csrf
+     @method('delete')
+     <button type="submit" class=" btn btn-danger">Eliminar <i class="fa fa-trash "></i></button>
+ </form>
 @endsection

@@ -98,4 +98,11 @@ class CursoController extends Controller
             $curso->save();
             return Redirect()->route('cursos.show', $curso);
     }
+
+    //DELETE
+    public function destroy(curso $curso){
+        $curso->delete();
+        return Redirect()->route('cursos.index');
+    }
+
 }
