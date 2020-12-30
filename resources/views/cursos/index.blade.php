@@ -27,7 +27,7 @@
             <td>{{$curso->name}}</td>
             <td>{{$curso->description}}</td>
             <td>
-              <a href="{{route('cursos.show', $curso->id)}}" class="btn btn-info">View details <i class="fa fa-list"></i></a>
+              <a href="{{route('cursos.show', $curso)}}" class="btn btn-info">View details <i class="fa fa-list"></i></a>
             </td>
           </tr>
           @endforeach

@@ -50,7 +50,7 @@ class CursoController extends Controller
 
         //falta validar
         // return Redirect()->route('cursos.show', $curso);
-         return Redirect()->route('cursos.show', $curso->id);
+         return Redirect()->route('cursos.show', $curso);
     }
     
     //GET

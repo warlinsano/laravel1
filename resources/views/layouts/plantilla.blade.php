@@ -14,11 +14,23 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     {{-- favicon  --}}
     {{-- estilos  --}}
+    <style>
+        .active{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    {{-- header --}}
     {{-- nav  --}}
+    @include('layouts.partials.header')
 
     @yield('content')
+    
+    {{-- footer --}}
+    @include('layouts.partials.footer')
+
     {{-- script  --}}
 </body>
 </html>

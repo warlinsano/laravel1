@@ -26,9 +26,16 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        //cambiear el nombre de la rutas al español
+        Route::resourceVerbs([
+            'create' => 'crear',
+            'edit' => 'editar',
+        ]);
+
         $this->configureRateLimiting();
 
         $this->routes(function () {
+       
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
 
@@ -36,6 +43,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->middleware('api')
                 ->group(base_path('routes/api.php'));
         });
+
     }
 
     /**
