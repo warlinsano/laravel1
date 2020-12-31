@@ -18,6 +18,11 @@
                     Nosotros <i class="fa fa-users"></i>
                 </a>
             </li>
+            <li>
+                <a href="{{route('contactanos.index')}}" class="{{request()->routeIs('contactanos.*') ? 'active': ''}}">
+                    Contactanos <i class="fa fa-users"></i>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>

@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\contactanosController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,8 +24,11 @@ Route::get('/',HomeController::class)->name('home');
 Route::resource('cursos', CursoController::class);
 //cambiar nombre de ruta  existentes y parametros
 // Route::resource('Asignaturas', CursoController::class)->parameters(['Asignaturas'=>'curso'])->names('cursos');
-Route::view('nosotros', 'nosotros')->name('nosotros');;
+Route::view('nosotros', 'nosotros')->name('nosotros');
 
+Route::get('contactanos',[contactanosController::class, 'index'])->name('contactanos.index');
+
+Route::post('contactanos',[contactanosController::class, 'store'])->name('contactanos.store');
 
 // // // Route::get('cursos', function () {
 // // //     return "Bienvenido a los cursos";
