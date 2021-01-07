@@ -20,8 +20,11 @@ use App\Http\Controllers\contactanosController;
 // // // Route::get('/', function () {
 // // //     return view('welcome');
 // // // });
+
 Route::get('/',HomeController::class)->name('home');
+
 Route::resource('cursos', CursoController::class);
+
 //cambiar nombre de ruta  existentes y parametros
 // Route::resource('Asignaturas', CursoController::class)->parameters(['Asignaturas'=>'curso'])->names('cursos');
 Route::view('nosotros', 'nosotros')->name('nosotros');
@@ -29,6 +32,21 @@ Route::view('nosotros', 'nosotros')->name('nosotros');
 Route::get('contactanos',[contactanosController::class, 'index'])->name('contactanos.index');
 
 Route::post('contactanos',[contactanosController::class, 'store'])->name('contactanos.store');
+
+//prueba de los filtros o middleware de age
+//http://localhost/laravel1/public/prueba?age=15
+Route::get('prueba', function () {
+    return "Has entrado a esta ructa correctamenete...";
+})->middleware('age');
+
+// Route::get('prueba', function () {
+//     return "Has entrado a esta ructa correctamenete...";
+// })->middleware(['auth:santum','age']);
+
+Route::get('NoAutorizado', function () {
+    return "NO AUTORIZADO";
+});
+
 
 // // // Route::get('cursos', function () {
 // // //     return "Bienvenido a los cursos";

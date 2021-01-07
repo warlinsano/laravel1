@@ -27,6 +27,38 @@
         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
       </div>
     </div>
+
+      @php
+        $color='alert-success';
+        $alert='alert';
+    @endphp
+
+    <x-alert :color="$color" class="mb-4">
+      <x-slot name="title">
+         Titulo 1
+      </x-slot>
+      Hola mundo
+     </x-alert>
+
+    <x-alert color="alert-warning">
+      <x-slot name="title">
+        Titulo 2
+     </x-slot>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nesciunt voluptas delectus quisquam doloremque fugit nisi aliquid! Magnam itaque tempora harum sequi iusto nulla beatae, reprehenderit commodi cupiditate molestias voluptatem.
+    </x-alert>
+
+    {{-- <x-alert  /> --}}
+    <x-alert2 color="alert-info"> 
+    </x-alert2> 
+
+  <x-dynamic-component :component=" $alert" >
+    <x-slot name="title">
+      Titulo 1
+    </x-slot>
+    Hola mundo
+  </x-dynamic-component>
+
+    
   </div>
 @endsection
 
