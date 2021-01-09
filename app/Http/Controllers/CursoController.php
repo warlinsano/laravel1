@@ -23,6 +23,15 @@ class CursoController extends Controller
     //GET
     public function create(){
         // return "create curso";
+        // $data = collect([
+        //     ['id_role' => '1', 'nombre' => 'usuario'],
+        //     ['id_role' => '2', 'nombre' => 'administrador'],
+        // ]);
+        
+        // $roles = $data->pluck('nombre', 'id_role');
+        // $roles->all(); // ['1' => 'usuario', '2' => 'administrador']
+        // return view('cursos.create' ,compact('roles'));
+
         return view('cursos.create');
     }
  

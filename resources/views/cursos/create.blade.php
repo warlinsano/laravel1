@@ -30,5 +30,11 @@
       <button type="submit" class="btn btn-primary">Add Couse</button>
     </form>
 
+    {{-- <select id="developers">
+      @foreach( $roles as $key => $value )
+        <option value="{{ $key }}">{{ $value }}</option>
+      @endforeach
+   </select> --}}
+
   </div>
 @endsection
